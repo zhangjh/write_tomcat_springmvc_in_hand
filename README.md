@@ -21,7 +21,7 @@ Servlet处理器通过读取配置，根据不同的路径利用反射生成具�
 4. **Tomcat容器**(`com.test.tomcat.servlet.tomcat`)
 
 　　TomCat容器负责串起流程开启web服务，利用Socket来监听并处理任务。
-demo框架没有提供线程池机制了，每个请求都会新开一个线程提供服务。
+demo框架模拟Tomcat线程池机制，每个请求都会新开一个线程提供服务，最大线程数200，常驻线程10，空闲线程保留时长30s。
 通过继承抽象基类实现了两个Tomcat实例，分别通过web.xml及JavaConfig来进行初始化。
 
 ### 运行
