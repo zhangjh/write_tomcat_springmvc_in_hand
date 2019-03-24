@@ -10,8 +10,8 @@ import com.test.springmvc.servlet.tomcat.MyTomCat;
  */
 @Configuration(basePackage = "com.test.springmvc", port = 8082)
 public class Application {
-    private String basePackage = null;
-    private int port = 8080;
+    private String basePackage;
+    private int port;
 
     /** 从配置注解获取配置 */
     private void loadConfig() {
